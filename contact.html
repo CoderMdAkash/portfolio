@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Md Akash Mia</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'picto-primary': '#9929fb',
+                        'picto-primary-dark': '#650fa0',
+                        'soft-white': '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Work Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-[1320px] mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 font-bold text-2xl text-gray-900 tracking-tight">
+                <img src="images/logo.png" alt="Md Akash Mia Logo" class="w-10 h-10 rounded-full object-cover shadow-md">
+                <span>Akash Mia<span class="text-purple-600">.</span></span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-600">
+                <a href="index.html" class="hover:text-purple-600 transition-colors">Home</a>
+                <a href="about.html" class="hover:text-purple-600 transition-colors">About</a>
+                <a href="portfolio.html" class="hover:text-purple-600 transition-colors">Portfolio</a>
+                <a href="service.html" class="hover:text-purple-600 transition-colors">Services</a>
+                <a href="faq.html" class="hover:text-purple-600 transition-colors">FAQs</a>
+                <a href="contact.html" class="text-purple-600 font-bold border-b-2 border-purple-600 pb-1">Contact</a>
+            </nav>
+            
+            <div class="flex items-center gap-3">
+                <a href="contact.html" class="btn-primary-custom text-sm py-2 px-5 hidden sm:inline-flex">
+                    Order Service
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-purple-600 text-2xl focus:outline-none p-1">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-6 py-4 space-y-3">
+            <a href="index.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">Home</a>
+            <a href="about.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">About</a>
+            <a href="portfolio.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">Portfolio</a>
+            <a href="service.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">Services</a>
+            <a href="faq.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">FAQs</a>
+            <a href="contact.html" class="block font-bold text-purple-600 py-2">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <!-- Title Banner -->
+        <section class="py-16 bg-gray-900 text-white border-b border-gray-800">
+            <div class="max-w-[1320px] mx-auto px-4 text-center space-y-3">
+                <span class="text-purple-400 font-bold text-xs uppercase tracking-widest">Get In Touch</span>
+                <h1 class="text-4xl sm:text-5xl font-extrabold">Contact Information</h1>
+                <p class="text-gray-400 text-sm max-w-xl mx-auto">Have a project in mind or want to consult? Send a message directly.</p>
+            </div>
+        </section>
+
+        <!-- Contact Main Section -->
+        <section class="py-24 bg-white">
+            <div class="max-w-[1320px] mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Left: Contact Details -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div class="space-y-3">
+                            <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Reach Out</span>
+                            <h2 class="text-3xl font-bold text-gray-900">Let's Discuss Your Project</h2>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Fill out the contact form or send an email. I usually respond within 2-4 hours.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-semibold text-gray-400 uppercase">Email Address</div>
+                                    <div id="contact-email" class="font-bold text-gray-900 text-base mt-0.5">akash904069@gmail.com</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-semibold text-gray-400 uppercase">Phone & WhatsApp</div>
+                                    <div id="contact-phone" class="font-bold text-gray-900 text-base mt-0.5">+880 1700 000 000</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-semibold text-gray-400 uppercase">Office Location</div>
+                                    <div id="contact-location" class="font-bold text-gray-900 text-base mt-0.5">Dhaka, Bangladesh</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Embedded Google Map -->
+                        <div class="rounded-3xl overflow-hidden border border-gray-200 shadow-sm h-64">
+                            <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233667.8223908687!2d90.25487212022849!3d23.780887457084543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Right: AJAX Contact Form -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-gray-200 shadow-sm space-y-6">
+                            <h3 class="text-2xl font-bold text-gray-900">Send A Direct Message</h3>
+
+                            <div id="contact-success-alert" class="hidden p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-semibold flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
+                                <span>Thank you! Your message has been sent successfully via AJAX.</span>
+                            </div>
+
+                            <form id="ajax-contact-form" class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Name *</label>
+                                        <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white" placeholder="John Doe">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Email *</label>
+                                        <input type="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white" placeholder="john@example.com">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Phone Number *</label>
+                                        <input type="tel" id="contact-phone-input" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white" placeholder="+880 1700 000 000">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Address *</label>
+                                        <input type="text" id="contact-address-input" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white" placeholder="Dhaka, Bangladesh">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Message *</label>
+                                    <textarea required rows="5" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white" placeholder="Tell me about your project..."></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full btn-primary-custom justify-center py-4 text-sm font-bold">
+                                    Submit Message <i class="fa-solid fa-paper-plane ms-2"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#2A374A] text-white py-16 mt-auto">
+        <div class="max-w-[1320px] mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-700 pb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold text-sm">AM</span>
+                        Md Akash Mia
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Full-Stack Developer crafting responsive web apps with AJAX dynamic loading.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-purple-300">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Me</a></li>
+                        <li><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="service.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-purple-300">Live Clock</h4>
+                    <div class="bg-gray-800/80 p-4 rounded-2xl border border-gray-700/60 mb-4">
+                        <div class="text-xs text-gray-400 mb-1">System Clock:</div>
+                        <div id="live-datetime" class="font-mono text-purple-400 font-bold text-sm">Loading Clock...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 text-center text-gray-400 text-sm">
+                &copy; 2026 Md Akash Mia. Decoupled Standalone HTML/AJAX Frontend.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

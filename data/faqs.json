@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "category": "Development",
+    "question": "What web development technologies do you specialize in?",
+    "answer": "I specialize in Full-Stack Web Development using PHP 8+, Laravel 11, MySQL, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Alpine.js, Vue.js, and RESTful API architecture."
+  },
+  {
+    "id": 2,
+    "category": "Services",
+    "question": "How long does it take to complete a custom website project?",
+    "answer": "Standard landing pages or portfolio websites take approximately 3-7 business days. Complex web applications or e-commerce platforms take between 2 to 6 weeks depending on custom feature requirements."
+  },
+  {
+    "id": 3,
+    "category": "Support",
+    "question": "Do you provide ongoing site maintenance and support after launch?",
+    "answer": "Yes! I offer dedicated post-launch maintenance, bug fixes, security patches, database backups, server monitoring, and continuous feature upgrades."
+  },
+  {
+    "id": 4,
+    "category": "General",
+    "question": "Will my website be mobile-responsive and SEO-friendly?",
+    "answer": "Absolutely. Every website I build is engineered mobile-first, ensuring 100% responsiveness across smartphones, tablets, and desktop viewports, with meta tags and structural SEO optimization."
+  },
+  {
+    "id": 5,
+    "category": "Pricing",
+    "question": "What are your payment terms and billing structure?",
+    "answer": "We typically operate on a milestone-based model: 50% upfront deposit upon contract signing and project kickoff, and 50% final payment upon project approval and live server deployment."
+  },
+  {
+    "id": 6,
+    "category": "Services",
+    "question": "Can you convert Figma or Adobe XD designs into clean HTML/CSS?",
+    "answer": "Yes! I convert Figma, Sketch, or Adobe XD design files into pixel-perfect, W3C valid, responsive HTML5 and Tailwind CSS templates."
+  }
+]

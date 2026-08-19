@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Jenkins",
+    "designation": "Product Manager, TechEdge",
+    "photo": "images/person.png",
+    "rating": 5,
+    "comment": "Akash delivered our Laravel e-commerce system ahead of schedule. The code quality, attention to detail, and communication were outstanding throughout the project!"
+  },
+  {
+    "id": 2,
+    "name": "Michael Roberts",
+    "designation": "Founder, StartupStudio",
+    "photo": "images/person2.png",
+    "rating": 5,
+    "comment": "Working with Akash was a fantastic experience. He transformed our complex requirements into a sleek, super-fast SaaS dashboard."
+  },
+  {
+    "id": 3,
+    "name": "David Chen",
+    "designation": "CTO, CloudScale Ltd",
+    "photo": "images/person3.png",
+    "rating": 5,
+    "comment": "Highly skilled web developer with deep knowledge of backend architecture and responsive UI design. Highly recommended for any serious web development project!"
+  }
+]

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Article Details - Md Akash Mia</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'picto-primary': '#9929fb',
+                        'picto-primary-dark': '#650fa0',
+                        'soft-white': '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Work Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-[1320px] mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 font-bold text-2xl text-gray-900 tracking-tight">
+                <img src="images/logo.png" alt="Md Akash Mia Logo" class="w-10 h-10 rounded-full object-cover shadow-md">
+                <span>Akash Mia<span class="text-purple-600">.</span></span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-600">
+                <a href="index.html" class="hover:text-purple-600 transition-colors">Home</a>
+                <a href="about.html" class="hover:text-purple-600 transition-colors">About</a>
+                <a href="portfolio.html" class="hover:text-purple-600 transition-colors">Portfolio</a>
+                <a href="service.html" class="hover:text-purple-600 transition-colors">Services</a>
+                <a href="faq.html" class="hover:text-purple-600 transition-colors">FAQs</a>
+                <a href="contact.html" class="hover:text-purple-600 transition-colors">Contact</a>
+            </nav>
+            
+            <div class="flex items-center gap-3">
+                <a href="contact.html" class="btn-primary-custom text-sm py-2 px-5 hidden sm:inline-flex">
+                    Order Service
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <!-- Article Header Banner -->
+        <section class="py-16 bg-gray-900 text-white border-b border-gray-800">
+            <div class="max-w-4xl mx-auto px-4 space-y-3">
+                <a href="index.html" class="text-purple-400 font-bold text-xs uppercase tracking-widest inline-flex items-center gap-1 hover:underline mb-2">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </a>
+                <h1 id="blog-title" class="text-3xl sm:text-5xl font-extrabold leading-tight">Loading Article...</h1>
+                <div class="flex items-center gap-4 text-xs text-gray-400 pt-2">
+                    <span><i class="fa-regular fa-calendar me-1"></i> <span id="blog-date">Date</span></span>
+                    <span><i class="fa-regular fa-user me-1"></i> <span id="blog-author">Author</span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Body Section -->
+        <section class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 space-y-8">
+                <div class="aspect-[16/9] rounded-3xl overflow-hidden shadow-xl border border-gray-100 bg-gray-100">
+                    <img id="blog-image" src="images/blog/blog-1.jpg" alt="Blog Cover" class="w-full h-full object-cover">
+                </div>
+
+                <div class="prose max-w-none text-gray-700 text-base leading-relaxed space-y-4">
+                    <p id="blog-content">
+                        Loading article content via AJAX...
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#2A374A] text-white py-16 mt-auto">
+        <div class="max-w-[1320px] mx-auto px-4 text-center text-gray-400 text-sm">
+            &copy; 2026 Md Akash Mia. Decoupled Standalone HTML/AJAX Frontend.
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

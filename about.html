@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Md Akash Mia</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'picto-primary': '#9929fb',
+                        'picto-primary-dark': '#650fa0',
+                        'soft-white': '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Work Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-[1320px] mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 font-bold text-2xl text-gray-900 tracking-tight">
+                <img src="images/logo.png" alt="Md Akash Mia Logo" class="w-10 h-10 rounded-full object-cover shadow-md">
+                <span>Akash Mia<span class="text-purple-600">.</span></span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-600">
+                <a href="index.html" class="hover:text-purple-600 transition-colors">Home</a>
+                <a href="about.html" class="text-purple-600 font-bold border-b-2 border-purple-600 pb-1">About</a>
+                <a href="portfolio.html" class="hover:text-purple-600 transition-colors">Portfolio</a>
+                <a href="service.html" class="hover:text-purple-600 transition-colors">Services</a>
+                <a href="faq.html" class="hover:text-purple-600 transition-colors">FAQs</a>
+                <a href="contact.html" class="hover:text-purple-600 transition-colors">Contact</a>
+            </nav>
+            
+            <div class="flex items-center gap-3">
+                <a href="contact.html" class="btn-primary-custom text-sm py-2 px-5 hidden sm:inline-flex">
+                    Order Service
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-purple-600 text-2xl focus:outline-none p-1">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-6 py-4 space-y-3">
+            <a href="index.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">Home</a>
+            <a href="about.html" class="block font-bold text-purple-600 py-2">About</a>
+            <a href="portfolio.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">Portfolio</a>
+            <a href="service.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">Services</a>
+            <a href="faq.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">FAQs</a>
+            <a href="contact.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <!-- Title Banner -->
+        <section class="py-16 bg-gray-900 text-white border-b border-gray-800">
+            <div class="max-w-[1320px] mx-auto px-4 text-center space-y-3">
+                <span class="text-purple-400 font-bold text-xs uppercase tracking-widest">Get To Know Me</span>
+                <h1 class="text-4xl sm:text-5xl font-extrabold">About Me & Technical Profile</h1>
+                <p class="text-gray-400 text-sm max-w-xl mx-auto">Explore my background, skill proficiencies, and career journey.</p>
+            </div>
+        </section>
+
+        <!-- Biography Section -->
+        <section class="py-24 bg-white">
+            <div class="max-w-[1320px] mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-100 bg-gray-100">
+                            <img id="about-img" src="images/akash.jpg" alt="Md Akash Mia Profile Image" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 space-y-6">
+                        <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Personal Biography</span>
+                        <h2 class="text-3xl font-bold text-gray-900">
+                            I'm <span id="about-name" class="text-purple-600">Md Akash Mia</span>, a <span id="about-title">Full-Stack Developer</span>
+                        </h2>
+                        <p id="about-bio" class="text-gray-600 leading-relaxed text-base">
+                            Passionate and detail-oriented Full-Stack Developer with over 3+ years of experience in crafting scalable web applications, responsive user interfaces, and robust backend architectures. Specialized in Laravel, React, Tailwind CSS, PHP, and MySQL.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4 pt-4 text-sm font-semibold">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-envelope text-purple-600"></i>
+                                <span id="about-email">akash904069@gmail.com</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-location-dot text-purple-600"></i>
+                                <span id="about-location">Dhaka, Bangladesh</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 flex gap-4">
+                            <a href="files/resume.pdf" target="_blank" download class="btn-primary-custom text-sm">
+                                <i class="fa-solid fa-download me-2"></i>Download Resume PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Existing Client & Partnerships -->
+        <section class="py-20 bg-slate-50 border-y border-gray-100">
+            <div class="max-w-[1320px] mx-auto px-4">
+                <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                    <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Collaborations</span>
+                    <h2 class="text-3xl font-bold text-gray-900">Clients & Partner Brands</h2>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 items-center">
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center font-bold text-gray-400 text-lg hover:text-purple-600 transition-colors">ACME Corp</div>
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center font-bold text-gray-400 text-lg hover:text-purple-600 transition-colors">Shopify Partner</div>
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center font-bold text-gray-400 text-lg hover:text-purple-600 transition-colors">NextGen AI</div>
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center font-bold text-gray-400 text-lg hover:text-purple-600 transition-colors">InnovateX</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skill Section (Loaded via AJAX) -->
+        <section class="py-24 bg-white">
+            <div class="max-w-[1320px] mx-auto px-4">
+                <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                    <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Technical Skill Bars</span>
+                    <h2 class="text-3xl font-bold text-gray-900">Skill Information</h2>
+                </div>
+                <div id="skills-progress-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 space-y-3">
+                        <div class="flex justify-between font-bold text-sm">
+                            <span><i class="fa-brands fa-laravel text-purple-600 mr-2"></i> PHP & Laravel</span>
+                            <span class="text-purple-600">92%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-purple-600 h-2.5 rounded-full" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 space-y-3">
+                        <div class="flex justify-between font-bold text-sm">
+                            <span><i class="fa-brands fa-html5 text-purple-600 mr-2"></i> HTML5 & CSS3</span>
+                            <span class="text-purple-600">95%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-purple-600 h-2.5 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 space-y-3">
+                        <div class="flex justify-between font-bold text-sm">
+                            <span><i class="fa-brands fa-js text-purple-600 mr-2"></i> JavaScript (ES6+) & AJAX</span>
+                            <span class="text-purple-600">88%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-purple-600 h-2.5 rounded-full" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 space-y-3">
+                        <div class="flex justify-between font-bold text-sm">
+                            <span><i class="fa-solid fa-code-merge text-purple-600 mr-2"></i> Tailwind CSS & Bootstrap</span>
+                            <span class="text-purple-600">94%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-purple-600 h-2.5 rounded-full" style="width: 94%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#2A374A] text-white py-16 mt-auto">
+        <div class="max-w-[1320px] mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-700 pb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold text-sm">AM</span>
+                        Md Akash Mia
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Full-Stack Developer crafting responsive web apps with AJAX dynamic loading.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-purple-300">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Me</a></li>
+                        <li><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="service.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-purple-300">Live Clock</h4>
+                    <div class="bg-gray-800/80 p-4 rounded-2xl border border-gray-700/60 mb-4">
+                        <div class="text-xs text-gray-400 mb-1">System Clock:</div>
+                        <div id="live-datetime" class="font-mono text-purple-400 font-bold text-sm">Loading Clock...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 text-center text-gray-400 text-sm">
+                &copy; 2026 Md Akash Mia. Decoupled Standalone HTML/AJAX Frontend.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

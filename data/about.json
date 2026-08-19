@@ -1,0 +1,20 @@
+{
+  "name": "Md Akash Mia",
+  "title": "Full-Stack Web Developer & UI Designer",
+  "bio": "Passionate and detail-oriented Full-Stack Developer with over 3+ years of experience in crafting scalable web applications, responsive user interfaces, and robust backend architectures. Specialized in Laravel, React, Tailwind CSS, PHP, and MySQL.",
+  "email": "akash904069@gmail.com",
+  "phone": "+880 1700 000 000",
+  "location": "Dhaka, Bangladesh",
+  "exp_years": 3,
+  "completed_projects": 45,
+  "satisfied_clients": 30,
+  "awards_won": 5,
+  "image": "images/akash.jpg",
+  "cv_link": "files/resume.pdf",
+  "socials": {
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com",
+    "twitter": "https://twitter.com",
+    "facebook": "https://facebook.com"
+  }
+}

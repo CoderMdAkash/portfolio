@@ -1,0 +1,94 @@
+/* Custom Styles for Decoupled Frontend Portfolio */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #9929fb;
+  --primary-dark: #650fa0;
+  --bg-soft-white: #f8fafc;
+  --bg-dark: #0f172a;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Primary Button Styling */
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(153, 41, 251, 0.4);
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Swiper Custom Bullets */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+  width: 10px !important;
+  height: 10px !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #9929fb !important;
+  width: 28px !important;
+  border-radius: 10px !important;
+}
+
+/* Skeleton Loading Shimmer */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Accordion Transition */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, padding 0.35s ease;
+}
+
+.accordion-content.active {
+  max-height: 500px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #9929fb;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #650fa0;
+}

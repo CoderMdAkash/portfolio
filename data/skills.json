@@ -1,0 +1,38 @@
+[
+  {
+    "name": "PHP & Laravel",
+    "percentage": 92,
+    "icon": "fa-brands fa-laravel",
+    "category": "Backend"
+  },
+  {
+    "name": "HTML5 & CSS3",
+    "percentage": 95,
+    "icon": "fa-brands fa-html5",
+    "category": "Frontend"
+  },
+  {
+    "name": "JavaScript (ES6+) & AJAX",
+    "percentage": 88,
+    "icon": "fa-brands fa-js",
+    "category": "Frontend"
+  },
+  {
+    "name": "Tailwind CSS & Bootstrap",
+    "percentage": 94,
+    "icon": "fa-solid fa-code-merge",
+    "category": "Frontend"
+  },
+  {
+    "name": "MySQL & Database Architecture",
+    "percentage": 85,
+    "icon": "fa-solid fa-database",
+    "category": "Database"
+  },
+  {
+    "name": "Git & Version Control",
+    "percentage": 90,
+    "icon": "fa-brands fa-github",
+    "category": "Tools"
+  }
+]

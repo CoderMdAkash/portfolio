@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Enterprise E-Commerce Platform",
+    "category": "Web Application",
+    "image": "images/portfolio/card-1.png",
+    "short_description": "A high-performance online shop built with Laravel, Alpine.js & Tailwind CSS.",
+    "full_description": "This project is a feature-rich e-commerce store supporting multi-currency transactions, customer order management, inventory management, dynamic product filters, and instant payment gateway integration. Fully optimized for speed and SEO performance.",
+    "client": "RetailGlobal Corp",
+    "duration": "2 Months",
+    "tools": ["Laravel", "Tailwind CSS", "Alpine.js", "MySQL", "Stripe API"],
+    "live_url": "#"
+  },
+  {
+    "id": 2,
+    "title": "SaaS Dashboard & Analytics Hub",
+    "category": "Dashboard",
+    "image": "images/portfolio/card-2.png",
+    "short_description": "Interactive data visualization dashboard with real-time charts and reporting.",
+    "full_description": "Designed and implemented an admin metrics panel for SaaS application metrics, tracking active subscribers, user retention, daily active users, and revenue benchmarks.",
+    "client": "DataMetrics Inc",
+    "duration": "1 Month",
+    "tools": ["Chart.js", "Tailwind CSS", "Laravel REST API", "VueJS"],
+    "live_url": "#"
+  },
+  {
+    "id": 3,
+    "title": "Healthcare Mobile Web App",
+    "category": "Mobile UI/UX",
+    "image": "images/portfolio/card-3.png",
+    "short_description": "Patient portal for booking doctor appointments and viewing medical history.",
+    "full_description": "A responsive healthcare application providing seamless doctor search, appointment scheduling, digital prescription downloads, and tele-consultation booking.",
+    "client": "HealthCare Plus",
+    "duration": "3 Weeks",
+    "tools": ["HTML5", "CSS3", "JavaScript", "Swiper JS", "Bootstrap"],
+    "live_url": "#"
+  },
+  {
+    "id": 4,
+    "title": "Corporate Real Estate Portal",
+    "category": "Web Application",
+    "image": "images/portfolio/card-4.png",
+    "short_description": "Property listing website with interactive maps and filterable options.",
+    "full_description": "Developed a real estate search engine enabling users to browse commercial and residential properties with virtual tours, location maps, and agent contact forms.",
+    "client": "Prime Properties Ltd",
+    "duration": "1.5 Months",
+    "tools": ["Laravel", "Leaflet Maps API", "Tailwind CSS", "MySQL"],
+    "live_url": "#"
+  }
+]

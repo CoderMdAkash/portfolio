@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Full-Stack Web Development",
+    "icon": "fa-solid fa-code",
+    "summary": "Custom web application development using Laravel, PHP, MySQL, and modern JavaScript frameworks.",
+    "details": "We build scalable, secure, and fast enterprise web applications tailored to your business goals. From database schema design to RESTful APIs and modern frontend interfaces, everything is engineered for high performance.",
+    "features": [
+      "Custom RESTful APIs & MVC Architecture",
+      "Secure Database Design & Query Optimization",
+      "Admin Panel & Role-based Authentication",
+      "Post-Launch Maintenance & Support"
+    ],
+    "price": "$299"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX & Frontend Design",
+    "icon": "fa-solid fa-laptop-code",
+    "summary": "Creating highly dynamic, responsive, and pixel-perfect UI layouts using HTML5, Tailwind CSS, & Alpine.js.",
+    "details": "Crafting visually stunning, modern, and user-centric interfaces. We ensure seamless micro-animations, glassmorphism design systems, and mobile-first responsiveness across all device viewports.",
+    "features": [
+      "Mobile-First Responsive Layouts",
+      "Interactive Micro-Animations & Carousels",
+      "W3C Valid & Accessibility Ready Code",
+      "Figma to HTML/CSS Conversion"
+    ],
+    "price": "$199"
+  },
+  {
+    "id": 3,
+    "title": "E-Commerce Solutions",
+    "icon": "fa-solid fa-cart-shopping",
+    "summary": "Building powerful online shopping experiences with payment gateway integrations and inventory tools.",
+    "details": "Complete digital storefront development equipped with dynamic product catalogs, multi-currency support, shopping cart flows, customer accounts, and secure checkout processing.",
+    "features": [
+      "Shopping Cart & Checkout Flow",
+      "Stripe, PayPal & Local Payment Integration",
+      "Order, Inventory & Product Management",
+      "SEO Optimization for E-Commerce"
+    ],
+    "price": "$399"
+  },
+  {
+    "id": 4,
+    "title": "API Integration & Bug Fixing",
+    "icon": "fa-solid fa-screwdriver-wrench",
+    "summary": "Integrating 3rd party APIs, optimizing existing PHP/Laravel code, and troubleshooting site bugs.",
+    "details": "Rapid troubleshooting, legacy codebase refactoring, security audits, and seamless third-party API integrations (Payment gateways, CRM, Social Login, Cloud Storage).",
+    "features": [
+      "Third-Party Service Integration",
+      "Database Query & Speed Optimization",
+      "Security Audits & Patch Updates",
+      "Cross-Browser Compatibility Fixes"
+    ],
+    "price": "$149"
+  }
+]

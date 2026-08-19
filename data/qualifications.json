@@ -1,0 +1,64 @@
+{
+  "educations": [
+    {
+      "id": 1,
+      "degree": "B.Sc. in Computer Science & Engineering",
+      "institution": "Dhaka International University",
+      "year": "2019 - 2023",
+      "result": "CGPA: 3.75 / 4.00",
+      "description": "Graduated with honors focusing on Software Engineering, Data Structures, Web Technologies, and Database Design."
+    },
+    {
+      "id": 2,
+      "degree": "Diploma in Computer Technology",
+      "institution": "Dhaka Polytechnic Institute",
+      "year": "2015 - 2019",
+      "result": "GPA: 3.82 / 4.00",
+      "description": "Comprehensive practical training in computer networking, web development basics, object-oriented programming, and electronics."
+    }
+  ],
+  "experiences": [
+    {
+      "id": 1,
+      "role": "Senior Full-Stack Developer",
+      "company": "TechVision Ltd",
+      "duration": "2024 - Present",
+      "location": "Dhaka, Bangladesh",
+      "responsibilities": [
+        "Architecting enterprise web applications using Laravel 11 and Tailwind CSS.",
+        "Leading a team of 4 frontend and backend engineers.",
+        "Writing scalable REST APIs for mobile app consumption."
+      ]
+    },
+    {
+      "id": 2,
+      "role": "Junior Web Developer",
+      "company": "DigitalCraft Agency",
+      "duration": "2022 - 2024",
+      "location": "Remote",
+      "responsibilities": [
+        "Built responsive client websites, landing pages, and e-commerce stores.",
+        "Converted Figma designs into pixel-perfect HTML/CSS templates.",
+        "Maintained MySQL database migrations and optimized queries."
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "title": "NSDA Level-4 Certified Web Developer",
+      "issuer": "National Skills Development Authority (NSDA)",
+      "year": "2025",
+      "credential_id": "NSDA-DEV-2025-089",
+      "details": "Certified in web development standards, responsive design, PHP/Laravel application architecture, and professional ethics."
+    },
+    {
+      "id": 2,
+      "title": "Laravel Certified Developer",
+      "issuer": "Laravel Certification Authority",
+      "year": "2024",
+      "credential_id": "LC-883921",
+      "details": "Validated expertise in Eloquent ORM, middleware, service providers, security, and blade templating."
+    }
+  ]
+}

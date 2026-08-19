@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Md Akash Mia</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'picto-primary': '#9929fb',
+                        'picto-primary-dark': '#650fa0',
+                        'soft-white': '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Work Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-[1320px] mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 font-bold text-2xl text-gray-900 tracking-tight">
+                <img src="images/logo.png" alt="Md Akash Mia Logo" class="w-10 h-10 rounded-full object-cover shadow-md">
+                <span>Akash Mia<span class="text-purple-600">.</span></span>
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-600">
+                <a href="index.html" class="hover:text-purple-600 transition-colors">Home</a>
+                <a href="about.html" class="hover:text-purple-600 transition-colors">About</a>
+                <a href="portfolio.html" class="hover:text-purple-600 transition-colors">Portfolio</a>
+                <a href="service.html" class="hover:text-purple-600 transition-colors">Services</a>
+                <a href="faq.html" class="text-purple-600 font-bold border-b-2 border-purple-600 pb-1">FAQs</a>
+                <a href="contact.html" class="hover:text-purple-600 transition-colors">Contact</a>
+            </nav>
+            
+            <div class="flex items-center gap-3">
+                <a href="contact.html" class="btn-primary-custom text-sm py-2 px-5 hidden sm:inline-flex">
+                    Order Service
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-purple-600 text-2xl focus:outline-none p-1">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-6 py-4 space-y-3">
+            <a href="index.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">Home</a>
+            <a href="about.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">About</a>
+            <a href="portfolio.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">Portfolio</a>
+            <a href="service.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">Services</a>
+            <a href="faq.html" class="block font-bold text-purple-600 py-2">FAQs</a>
+            <a href="contact.html" class="block font-medium text-gray-700 hover:text-purple-600 py-2">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <!-- Breadcrumb Header -->
+        <section class="py-10 bg-slate-50 border-b border-gray-100">
+            <div class="max-w-[1320px] mx-auto px-4">
+                <nav class="flex items-center gap-2 text-xs font-medium text-gray-500 mb-2">
+                    <a href="index.html" class="hover:text-purple-600 transition-colors">Home</a>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-gray-400"></i>
+                    <span class="text-purple-600 font-semibold">FAQs</span>
+                </nav>
+                <h1 class="text-3xl font-extrabold text-gray-900">Frequently Asked Questions</h1>
+            </div>
+        </section>
+
+        <!-- Static FAQ Question List -->
+        <section class="py-12 bg-white">
+            <div class="max-w-4xl mx-auto px-4 space-y-4">
+                
+                <div class="bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
+                    <button class="w-full text-left p-6 font-bold text-gray-900 flex justify-between items-center cursor-pointer" onclick="toggleFaq(1)">
+                        <span>What web development technologies do you specialize in?</span>
+                        <i class="fa-solid fa-chevron-down text-purple-600 transition-transform duration-300" id="faq-icon-1"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-gray-600 border-t border-gray-200 pt-4" id="faq-content-1">
+                        I specialize in Full-Stack Web Development using PHP 8+, Laravel 11, MySQL, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Alpine.js, Vue.js, and RESTful API architecture.
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
+                    <button class="w-full text-left p-6 font-bold text-gray-900 flex justify-between items-center cursor-pointer" onclick="toggleFaq(2)">
+                        <span>How long does it take to complete a custom website project?</span>
+                        <i class="fa-solid fa-chevron-down text-purple-600 transition-transform duration-300" id="faq-icon-2"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-gray-600 border-t border-gray-200 pt-4" id="faq-content-2">
+                        Standard landing pages or portfolio websites take approximately 3-7 business days. Complex web applications or e-commerce platforms take between 2 to 6 weeks depending on custom feature requirements.
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
+                    <button class="w-full text-left p-6 font-bold text-gray-900 flex justify-between items-center cursor-pointer" onclick="toggleFaq(3)">
+                        <span>Do you provide ongoing site maintenance and support after launch?</span>
+                        <i class="fa-solid fa-chevron-down text-purple-600 transition-transform duration-300" id="faq-icon-3"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-gray-600 border-t border-gray-200 pt-4" id="faq-content-3">
+                        Yes! I offer dedicated post-launch maintenance, bug fixes, security patches, database backups, server monitoring, and continuous feature upgrades.
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
+                    <button class="w-full text-left p-6 font-bold text-gray-900 flex justify-between items-center cursor-pointer" onclick="toggleFaq(4)">
+                        <span>Will my website be mobile-responsive and SEO-friendly?</span>
+                        <i class="fa-solid fa-chevron-down text-purple-600 transition-transform duration-300" id="faq-icon-4"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-gray-600 border-t border-gray-200 pt-4" id="faq-content-4">
+                        Absolutely. Every website I build is engineered mobile-first, ensuring 100% responsiveness across smartphones, tablets, and desktop viewports, with meta tags and structural SEO optimization.
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
+                    <button class="w-full text-left p-6 font-bold text-gray-900 flex justify-between items-center cursor-pointer" onclick="toggleFaq(5)">
+                        <span>What are your payment terms and billing structure?</span>
+                        <i class="fa-solid fa-chevron-down text-purple-600 transition-transform duration-300" id="faq-icon-5"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-gray-600 border-t border-gray-200 pt-4" id="faq-content-5">
+                        We typically operate on a milestone-based model: 50% upfront deposit upon contract signing and project kickoff, and 50% final payment upon project approval and live server deployment.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#2A374A] text-white py-12 mt-auto">
+        <div class="max-w-[1320px] mx-auto px-4 text-center text-gray-400 text-sm">
+            &copy; 2026 Md Akash Mia. Decoupled Standalone HTML/AJAX Frontend.
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

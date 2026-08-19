@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "slug": "mastering-laravel-11-best-practices",
+    "title": "Mastering Laravel 11: Best Practices & Architecture Patterns",
+    "date": "August 15, 2026",
+    "author": "Md Akash Mia",
+    "image": "images/blog/blog-1.jpg",
+    "excerpt": "Discover how to structure large-scale Laravel applications with service classes, repositories, and automated tests.",
+    "content": "Laravel 11 introduces streamlined configuration, enhanced performance, and simplified directory structures. In this post, we explore modern design patterns for maintaining clean, scalable PHP codebases..."
+  },
+  {
+    "id": 2,
+    "slug": "building-responsive-uis-with-tailwind-css",
+    "title": "Building Modern & Responsive UI Systems with Tailwind CSS",
+    "date": "August 10, 2026",
+    "author": "Md Akash Mia",
+    "image": "images/blog/blog-2.jpg",
+    "excerpt": "Learn utility-first styling techniques to build lightning-fast web interfaces without writing bloat CSS.",
+    "content": "Tailwind CSS has transformed modern web development. By leveraging utility classes and design tokens, developers can quickly implement custom designs that perform exceptionally well across device viewports..."
+  },
+  {
+    "id": 3,
+    "slug": "asynchronous-javascript-and-fetch-api",
+    "title": "Asynchronous JavaScript & Fetch API Deep Dive",
+    "date": "August 02, 2026",
+    "author": "Md Akash Mia",
+    "image": "images/blog/blog-3.jpg",
+    "excerpt": "Master Promises, Async/Await, and AJAX requests to build dynamic single-page and decoupled web experiences.",
+    "content": "Decoupling frontend applications from backend templates allows for better separation of concerns, faster client-side rendering, and seamless API consumption..."
+  }
+]
