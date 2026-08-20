@@ -74,112 +74,73 @@
 
     <main class="flex-1">
         <!-- Title Banner -->
-        <section class="py-16 bg-gray-900 text-white border-b border-gray-800">
-            <div class="max-w-[1320px] mx-auto px-4 text-center space-y-3">
+        <section class="py-12 sm:py-16 bg-slate-900 text-white">
+            <div class="max-w-[1320px] mx-auto px-4 text-center space-y-2">
                 <span class="text-purple-400 font-bold text-xs uppercase tracking-widest">Get In Touch</span>
-                <h1 class="text-4xl sm:text-5xl font-extrabold">Contact Information</h1>
-                <p class="text-gray-400 text-sm max-w-xl mx-auto">Have a project in mind or want to consult? Send a message directly.</p>
+                <h1 class="text-3xl sm:text-4xl font-bold">Contact Me</h1>
+                <p class="text-gray-400 text-sm max-w-xl mx-auto">Have a project in mind? Feel free to reach out anytime.</p>
             </div>
         </section>
 
-        <!-- Contact Main Section -->
-        <section class="py-24 bg-white">
+        <!-- Contact Form Section -->
+        <section class="py-16 sm:py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="bg-slate-50 p-8 sm:p-10 rounded-2xl border border-gray-200/80 shadow-sm space-y-6">
+                    <div class="text-center max-w-xl mx-auto space-y-2 mb-6">
+                        <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Send Message</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Let's Discuss Your Project</h2>
+                    </div>
+
+                    <div id="contact-success-alert" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-semibold flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
+                        <span>Thank you! Your message has been sent successfully.</span>
+                    </div>
+
+                    <form id="ajax-contact-form" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white text-sm" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Email *</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white text-sm" placeholder="john@example.com">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Phone Number *</label>
+                                <input type="tel" id="contact-phone-input" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white text-sm" placeholder="+880 1700 000 000">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Address *</label>
+                                <input type="text" id="contact-address-input" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white text-sm" placeholder="Dhaka, Bangladesh">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Message *</label>
+                            <textarea required rows="5" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white text-sm" placeholder="Tell me about your project..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full btn-primary-custom justify-center py-3.5 text-sm font-bold">
+                            Submit Message <i class="fa-solid fa-paper-plane ms-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section (Under Section) -->
+        <section class="py-16 bg-slate-50 border-t border-gray-100">
             <div class="max-w-[1320px] mx-auto px-4">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    
-                    <!-- Left: Contact Details -->
-                    <div class="lg:col-span-5 space-y-8">
-                        <div class="space-y-3">
-                            <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Reach Out</span>
-                            <h2 class="text-3xl font-bold text-gray-900">Let's Discuss Your Project</h2>
-                            <p class="text-gray-600 text-sm leading-relaxed">
-                                Fill out the contact form or send an email. I usually respond within 2-4 hours.
-                            </p>
-                        </div>
-
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xs font-semibold text-gray-400 uppercase">Email Address</div>
-                                    <div id="contact-email" class="font-bold text-gray-900 text-base mt-0.5">akash904069@gmail.com</div>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xs font-semibold text-gray-400 uppercase">Phone & WhatsApp</div>
-                                    <div id="contact-phone" class="font-bold text-gray-900 text-base mt-0.5">+880 1700 000 000</div>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xs font-semibold text-gray-400 uppercase">Office Location</div>
-                                    <div id="contact-location" class="font-bold text-gray-900 text-base mt-0.5">Dhaka, Bangladesh</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Embedded Google Map -->
-                        <div class="rounded-3xl overflow-hidden border border-gray-200 shadow-sm h-64">
-                            <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233667.8223908687!2d90.25487212022849!3d23.780887457084543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <!-- Right: AJAX Contact Form -->
-                    <div class="lg:col-span-7">
-                        <div class="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-gray-200 shadow-sm space-y-6">
-                            <h3 class="text-2xl font-bold text-gray-900">Send A Direct Message</h3>
-
-                            <div id="contact-success-alert" class="hidden p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-semibold flex items-center gap-3">
-                                <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
-                                <span>Thank you! Your message has been sent successfully via AJAX.</span>
-                            </div>
-
-                            <form id="ajax-contact-form" class="space-y-4">
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div>
-                                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Name *</label>
-                                        <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white" placeholder="John Doe">
-                                    </div>
-                                    <div>
-                                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Email *</label>
-                                        <input type="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white" placeholder="john@example.com">
-                                    </div>
-                                </div>
-
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div>
-                                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Phone Number *</label>
-                                        <input type="tel" id="contact-phone-input" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white" placeholder="+880 1700 000 000">
-                                    </div>
-                                    <div>
-                                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Address *</label>
-                                        <input type="text" id="contact-address-input" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white" placeholder="Dhaka, Bangladesh">
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Message *</label>
-                                    <textarea required rows="5" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-purple-600 bg-white" placeholder="Tell me about your project..."></textarea>
-                                </div>
-
-                                <button type="submit" class="w-full btn-primary-custom justify-center py-4 text-sm font-bold">
-                                    Submit Message <i class="fa-solid fa-paper-plane ms-2"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-
+                <div class="text-center max-w-xl mx-auto mb-8 space-y-1">
+                    <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Location</span>
+                    <h2 class="text-2xl font-bold text-gray-900">Find Me On Map</h2>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-gray-200/80 shadow-sm h-80 sm:h-96">
+                    <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233667.8223908687!2d90.25487212022849!3d23.780887457084543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </section>

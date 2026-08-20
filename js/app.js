@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
     startLiveClock();
     setupMobileMenu();
     initHeroSlider();
+    initTestimonialSlider();
     loadServicesData();
     loadPortfoliosData();
 });
@@ -157,13 +158,39 @@ function initHeroSlider() {
                 delay: 4000,
                 disableOnInteraction: false,
             },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
             navigation: {
                 nextEl: '.hero-next',
                 prevEl: '.hero-prev',
+            },
+        });
+    }
+}
+
+// 3b. Testimonial Swiper Slider Initializer
+function initTestimonialSlider() {
+    let sliderEl = document.querySelector('.testimonialSlider');
+    if (sliderEl && typeof Swiper !== 'undefined') {
+        new Swiper('.testimonialSlider', {
+            loop: true,
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction: false,
+            },
+            slidesPerView: 1,
+            spaceBetween: 24,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                }
+            },
+            navigation: {
+                nextEl: '.testimonial-next',
+                prevEl: '.testimonial-prev',
             },
         });
     }
@@ -201,15 +228,15 @@ async function loadServicesData() {
         for (let i = 0; i < services.length && i < 4; i++) {
             let s = services[i];
             html += `
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all cursor-pointer" onclick="openServiceModal(${s.id})">
-                    <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl mb-6">
-                        <i class="${s.icon}"></i>
+                <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm hover:border-purple-500 transition cursor-pointer space-y-3" onclick="openServiceModal(${s.id})">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-base font-bold text-gray-900">${s.title}</h3>
+                        <span class="text-xs font-bold text-purple-600">${s.price}</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">${s.title}</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-6">${s.summary}</p>
-                    <button onclick="event.stopPropagation(); openServiceModal(${s.id})" class="text-purple-600 font-bold text-sm hover:underline flex items-center gap-2">
-                        View Details <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </button>
+                    <p class="text-gray-600 text-xs leading-relaxed">${s.summary}</p>
+                    <div class="pt-2 text-xs font-semibold text-purple-600 flex items-center gap-1">
+                        <span>View Details</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
                 </div>
             `;
         }
@@ -223,18 +250,15 @@ async function loadServicesData() {
         for (let i = 0; i < services.length; i++) {
             let s = services[i];
             html += `
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm space-y-6 cursor-pointer" onclick="openServiceModal(${s.id})">
-                    <div class="flex justify-between items-center">
-                        <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl">
-                            <i class="${s.icon}"></i>
-                        </div>
-                        <span class="text-xl font-bold text-purple-600">${s.price}</span>
+                <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm hover:border-purple-500 transition cursor-pointer space-y-3" onclick="openServiceModal(${s.id})">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-base font-bold text-gray-900">${s.title}</h3>
+                        <span class="text-xs font-bold text-purple-600">${s.price}</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900">${s.title}</h3>
-                    <p class="text-gray-600 text-sm">${s.summary}</p>
-                    <button onclick="event.stopPropagation(); openServiceModal(${s.id})" class="btn-primary-custom text-xs py-3 w-full text-center justify-center">
-                        View Full Details
-                    </button>
+                    <p class="text-gray-600 text-xs leading-relaxed">${s.summary}</p>
+                    <div class="pt-2 text-xs font-semibold text-purple-600 flex items-center gap-1">
+                        <span>View Details</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
                 </div>
             `;
         }
@@ -314,7 +338,7 @@ async function loadPortfoliosData() {
     }
 }
 
-// 6. Service Modal Handler
+// 6. Service Modal Handler (Ultra Simple Design)
 async function openServiceModal(serviceId) {
     let services = await fetchJson('services.json');
     if (!services) return;
@@ -332,42 +356,54 @@ async function openServiceModal(serviceId) {
     if (!modal) {
         modal = document.createElement('div');
         modal.id = 'service-modal';
-        modal.className = 'hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4';
+        modal.className = 'hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4';
         modal.innerHTML = `
-            <div class="bg-white rounded-3xl max-w-lg w-full p-8 space-y-6 shadow-2xl relative border border-purple-100">
-                <button onclick="closeServiceModal()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-900 text-xl cursor-pointer">
+            <div class="bg-white rounded-lg border border-gray-300 max-w-sm w-full p-5 shadow-lg relative">
+                <button onclick="closeServiceModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-base focus:outline-none" aria-label="Close modal">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
-                <div class="flex items-center gap-4 border-b border-gray-100 pb-4">
-                    <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl">
-                        <i id="modal-service-icon" class="fa-solid fa-code"></i>
-                    </div>
-                    <div>
-                        <span id="modal-service-price" class="text-xs font-bold px-3 py-1 bg-purple-100 text-purple-700 rounded-full">$299</span>
-                        <h3 id="modal-service-title" class="text-2xl font-bold text-gray-900 mt-1">Service Title</h3>
+                <div class="mb-3 border-b border-gray-100 pb-3">
+                    <h3 id="modal-service-title" class="text-base font-bold text-gray-900">Service Title</h3>
+                    <div id="modal-service-price" class="text-sm font-bold text-purple-600 mt-0.5">$299</div>
+                </div>
+                <div class="space-y-3 text-xs text-gray-600 mb-5">
+                    <p id="modal-service-details" class="leading-relaxed">Description</p>
+                    <div id="modal-service-features-wrap" class="hidden pt-2 border-t border-gray-100">
+                        <div class="font-bold text-gray-800 mb-1">Key Features:</div>
+                        <ul id="modal-service-features" class="space-y-1 pl-1"></ul>
                     </div>
                 </div>
-                <div class="space-y-2">
-                    <h4 class="text-xs font-bold text-purple-600 uppercase tracking-wider">Service Overview</h4>
-                    <p id="modal-service-details" class="text-gray-600 text-sm leading-relaxed">Description</p>
-                </div>
-                <div class="pt-4 flex gap-3">
-                    <a href="contact.html" class="flex-1 btn-primary-custom justify-center py-3 text-sm font-bold text-center">
-                        Order This Service <i class="fa-solid fa-arrow-right ms-2"></i>
+                <div class="flex gap-2">
+                    <a href="contact.html" class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-medium text-xs py-2 px-3 rounded text-center">
+                        Order Now
                     </a>
-                    <button onclick="closeServiceModal()" class="px-6 py-3 rounded-full border border-gray-200 font-semibold text-gray-700 hover:bg-gray-100 text-sm cursor-pointer">
+                    <button onclick="closeServiceModal()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium text-xs py-2 px-3 rounded cursor-pointer">
                         Close
                     </button>
                 </div>
             </div>
         `;
         document.body.appendChild(modal);
+
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) closeServiceModal();
+        });
     }
 
-    document.getElementById('modal-service-icon').className = service.icon;
     document.getElementById('modal-service-title').textContent = service.title;
     document.getElementById('modal-service-price').textContent = service.price;
     document.getElementById('modal-service-details').textContent = service.details || service.summary;
+
+    let featuresWrap = document.getElementById('modal-service-features-wrap');
+    let featuresList = document.getElementById('modal-service-features');
+    if (featuresWrap && featuresList) {
+        if (service.features && service.features.length > 0) {
+            featuresList.innerHTML = service.features.map(f => `<li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-purple-600 text-[10px]"></i> <span>${f}</span></li>`).join('');
+            featuresWrap.classList.remove('hidden');
+        } else {
+            featuresWrap.classList.add('hidden');
+        }
+    }
 
     modal.classList.remove('hidden');
 }

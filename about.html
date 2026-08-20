@@ -74,111 +74,81 @@
 
     <main class="flex-1">
         <!-- Title Banner -->
-        <section class="py-16 bg-gray-900 text-white border-b border-gray-800">
-            <div class="max-w-[1320px] mx-auto px-4 text-center space-y-3">
+        <section class="py-12 sm:py-16 bg-slate-900 text-white">
+            <div class="max-w-[1320px] mx-auto px-4 text-center space-y-2">
                 <span class="text-purple-400 font-bold text-xs uppercase tracking-widest">Get To Know Me</span>
-                <h1 class="text-4xl sm:text-5xl font-extrabold">About Me & Technical Profile</h1>
-                <p class="text-gray-400 text-sm max-w-xl mx-auto">Explore my background, skill proficiencies, and career journey.</p>
+                <h1 class="text-3xl sm:text-4xl font-bold">About Me</h1>
+                <p class="text-gray-400 text-sm max-w-xl mx-auto">Full-Stack Web Developer based in Dhaka, Bangladesh.</p>
             </div>
         </section>
 
-        <!-- Biography Section -->
-        <section class="py-24 bg-white">
+        <!-- Biography Section (Left: Title & Description, Right: Image) -->
+        <section class="py-16 sm:py-20 bg-white">
             <div class="max-w-[1320px] mx-auto px-4">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-5 flex justify-center">
-                        <div class="w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-100 bg-gray-100">
-                            <img id="about-img" src="images/akash.jpg" alt="Md Akash Mia Profile Image" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <div class="lg:col-span-7 space-y-6">
-                        <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Personal Biography</span>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <!-- Left Section: Title & Description -->
+                    <div class="lg:col-span-7 space-y-4">
+                        <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Biography</span>
                         <h2 class="text-3xl font-bold text-gray-900">
                             I'm <span id="about-name" class="text-purple-600">Md Akash Mia</span>, a <span id="about-title">Full-Stack Developer</span>
                         </h2>
-                        <p id="about-bio" class="text-gray-600 leading-relaxed text-base">
+                        <p id="about-bio" class="text-gray-600 leading-relaxed text-sm sm:text-base">
                             Passionate and detail-oriented Full-Stack Developer with over 3+ years of experience in crafting scalable web applications, responsive user interfaces, and robust backend architectures. Specialized in Laravel, React, Tailwind CSS, PHP, and MySQL.
                         </p>
+                    </div>
 
-                        <div class="grid grid-cols-2 gap-4 pt-4 text-sm font-semibold">
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-envelope text-purple-600"></i>
-                                <span id="about-email">akash904069@gmail.com</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-location-dot text-purple-600"></i>
-                                <span id="about-location">Dhaka, Bangladesh</span>
-                            </div>
-                        </div>
-
-                        <div class="pt-4 flex gap-4">
-                            <a href="files/resume.pdf" target="_blank" download class="btn-primary-custom text-sm">
-                                <i class="fa-solid fa-download me-2"></i>Download Resume PDF
-                            </a>
+                    <!-- Right Section: Image -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="w-full max-w-sm aspect-[4/5] rounded-2xl overflow-hidden shadow-md border border-gray-200">
+                            <img id="about-img" src="images/akash.jpg" alt="Md Akash Mia Profile Image" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Existing Client & Partnerships -->
-        <section class="py-20 bg-slate-50 border-y border-gray-100">
+        <!-- Technical Skills (Under Section) -->
+        <section class="py-16 bg-slate-50 border-t border-gray-100">
             <div class="max-w-[1320px] mx-auto px-4">
-                <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
-                    <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Collaborations</span>
-                    <h2 class="text-3xl font-bold text-gray-900">Clients & Partner Brands</h2>
+                <div class="text-center max-w-xl mx-auto mb-10 space-y-2">
+                    <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Proficiencies</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Technical Skills</h2>
                 </div>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 items-center">
-                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center font-bold text-gray-400 text-lg hover:text-purple-600 transition-colors">ACME Corp</div>
-                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center font-bold text-gray-400 text-lg hover:text-purple-600 transition-colors">Shopify Partner</div>
-                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center font-bold text-gray-400 text-lg hover:text-purple-600 transition-colors">NextGen AI</div>
-                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center font-bold text-gray-400 text-lg hover:text-purple-600 transition-colors">InnovateX</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Skill Section (Loaded via AJAX) -->
-        <section class="py-24 bg-white">
-            <div class="max-w-[1320px] mx-auto px-4">
-                <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                    <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Technical Skill Bars</span>
-                    <h2 class="text-3xl font-bold text-gray-900">Skill Information</h2>
-                </div>
-                <div id="skills-progress-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 space-y-3">
+                <div id="skills-progress-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <div class="bg-white p-5 rounded-xl border border-gray-200/80 shadow-sm space-y-2.5">
                         <div class="flex justify-between font-bold text-sm">
                             <span><i class="fa-brands fa-laravel text-purple-600 mr-2"></i> PHP & Laravel</span>
                             <span class="text-purple-600">92%</span>
                         </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-purple-600 h-2.5 rounded-full" style="width: 92%"></div>
+                        <div class="w-full bg-gray-100 rounded-full h-2">
+                            <div class="bg-purple-600 h-2 rounded-full" style="width: 92%"></div>
                         </div>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 space-y-3">
+                    <div class="bg-white p-5 rounded-xl border border-gray-200/80 shadow-sm space-y-2.5">
                         <div class="flex justify-between font-bold text-sm">
                             <span><i class="fa-brands fa-html5 text-purple-600 mr-2"></i> HTML5 & CSS3</span>
                             <span class="text-purple-600">95%</span>
                         </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-purple-600 h-2.5 rounded-full" style="width: 95%"></div>
+                        <div class="w-full bg-gray-100 rounded-full h-2">
+                            <div class="bg-purple-600 h-2 rounded-full" style="width: 95%"></div>
                         </div>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 space-y-3">
+                    <div class="bg-white p-5 rounded-xl border border-gray-200/80 shadow-sm space-y-2.5">
                         <div class="flex justify-between font-bold text-sm">
                             <span><i class="fa-brands fa-js text-purple-600 mr-2"></i> JavaScript (ES6+) & AJAX</span>
                             <span class="text-purple-600">88%</span>
                         </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-purple-600 h-2.5 rounded-full" style="width: 88%"></div>
+                        <div class="w-full bg-gray-100 rounded-full h-2">
+                            <div class="bg-purple-600 h-2 rounded-full" style="width: 88%"></div>
                         </div>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 space-y-3">
+                    <div class="bg-white p-5 rounded-xl border border-gray-200/80 shadow-sm space-y-2.5">
                         <div class="flex justify-between font-bold text-sm">
                             <span><i class="fa-solid fa-code-merge text-purple-600 mr-2"></i> Tailwind CSS & Bootstrap</span>
                             <span class="text-purple-600">94%</span>
                         </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-purple-600 h-2.5 rounded-full" style="width: 94%"></div>
+                        <div class="w-full bg-gray-100 rounded-full h-2">
+                            <div class="bg-purple-600 h-2 rounded-full" style="width: 94%"></div>
                         </div>
                     </div>
                 </div>

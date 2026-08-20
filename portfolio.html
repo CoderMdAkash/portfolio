@@ -74,227 +74,49 @@
 
     <main class="flex-1">
         <!-- Title Banner -->
-        <section class="py-16 bg-gray-900 text-white border-b border-gray-800">
-            <div class="max-w-[1320px] mx-auto px-4 text-center space-y-3">
-                <span class="text-purple-400 font-bold text-xs uppercase tracking-widest">Qualifications & Showcase</span>
-                <h1 class="text-4xl sm:text-5xl font-extrabold">Portfolio & Resume</h1>
-                <p class="text-gray-400 text-sm max-w-xl mx-auto">Explore my credentials, education, certifications, and project showcase.</p>
+        <section class="py-12 sm:py-16 bg-slate-900 text-white">
+            <div class="max-w-[1320px] mx-auto px-4 text-center space-y-2">
+                <span class="text-purple-400 font-bold text-xs uppercase tracking-widest">Overview & Resume</span>
+                <h1 class="text-3xl sm:text-4xl font-bold">Portfolio Profile</h1>
+                <p class="text-gray-400 text-sm max-w-xl mx-auto">Key credentials and professional profile information.</p>
             </div>
         </section>
 
-        <!-- Personal Info Card (Loaded via AJAX) -->
-        <section class="py-20 bg-white border-b border-gray-100">
+        <!-- Personal Info Card (First Section) -->
+        <section class="py-16 sm:py-20 bg-white">
             <div class="max-w-[1320px] mx-auto px-4">
-                <div class="max-w-4xl mx-auto bg-slate-50 p-8 rounded-3xl border border-gray-200 space-y-6">
-                    <h2 class="text-2xl font-bold text-gray-900 border-b border-gray-200 pb-4">Personal Information</h2>
+                <div class="max-w-4xl mx-auto bg-slate-50 p-8 rounded-2xl border border-gray-200/80 shadow-sm space-y-6">
+                    <h2 class="text-xl font-bold text-gray-900 border-b border-gray-200/80 pb-4">Personal Information</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-sm">
                         <div>
-                            <span class="text-xs font-semibold text-gray-400 uppercase">Full Name</span>
+                            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Full Name</span>
                             <div id="info-name" class="font-bold text-gray-900 mt-1">Md Akash Mia</div>
                         </div>
                         <div>
-                            <span class="text-xs font-semibold text-gray-400 uppercase">Professional Title</span>
+                            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Professional Title</span>
                             <div id="info-title" class="font-bold text-gray-900 mt-1">Full-Stack Developer</div>
                         </div>
                         <div>
-                            <span class="text-xs font-semibold text-gray-400 uppercase">Email Address</span>
+                            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Email Address</span>
                             <div id="info-email" class="font-bold text-gray-900 mt-1">akash904069@gmail.com</div>
                         </div>
                         <div>
-                            <span class="text-xs font-semibold text-gray-400 uppercase">Location</span>
+                            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Location</span>
                             <div id="info-location" class="font-bold text-gray-900 mt-1">Dhaka, Bangladesh</div>
                         </div>
                         <div>
-                            <span class="text-xs font-semibold text-gray-400 uppercase">Phone</span>
+                            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Phone</span>
                             <div id="info-phone" class="font-bold text-gray-900 mt-1">+880 1700 000 000</div>
                         </div>
                         <div>
-                            <span class="text-xs font-semibold text-gray-400 uppercase">Experience</span>
+                            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Experience</span>
                             <div id="info-exp" class="font-bold text-purple-600 mt-1">3+ Years</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Education Information Section (Loaded via AJAX) -->
-        <section class="py-20 bg-slate-50 border-b border-gray-100">
-            <div class="max-w-[1320px] mx-auto px-4">
-                <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                    <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Academic Background</span>
-                    <h2 class="text-3xl font-bold text-gray-900">Education Information</h2>
-                </div>
-                <div id="portfolio-education-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-bold px-3 py-1 bg-purple-100 text-purple-700 rounded-full">2019 - 2023</span>
-                            <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">CGPA: 3.75 / 4.00</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900">B.Sc. in Computer Science & Engineering</h3>
-                        <div class="text-sm font-semibold text-gray-600">Dhaka International University</div>
-                        <p class="text-xs text-gray-500 leading-relaxed">Graduated with honors focusing on Software Engineering, Data Structures, Web Technologies, and Database Design.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-bold px-3 py-1 bg-purple-100 text-purple-700 rounded-full">2015 - 2019</span>
-                            <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">GPA: 3.82 / 4.00</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900">Diploma in Computer Technology</h3>
-                        <div class="text-sm font-semibold text-gray-600">Dhaka Polytechnic Institute</div>
-                        <p class="text-xs text-gray-500 leading-relaxed">Comprehensive practical training in computer networking, web development basics, object-oriented programming, and electronics.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Special Skills Section (Loaded via AJAX) -->
-        <section class="py-20 bg-white border-b border-gray-100">
-            <div class="max-w-[1320px] mx-auto px-4">
-                <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                    <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Special Competencies</span>
-                    <h2 class="text-3xl font-bold text-gray-900">Special Skills Overview</h2>
-                </div>
-                <div id="portfolio-skills-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center space-y-3 hover:bg-purple-50 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 mx-auto flex items-center justify-center text-xl">
-                            <i class="fa-brands fa-laravel"></i>
-                        </div>
-                        <div class="font-bold text-gray-900 text-sm">PHP & Laravel</div>
-                        <div class="text-xs font-semibold text-purple-600">92% Mastery</div>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center space-y-3 hover:bg-purple-50 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 mx-auto flex items-center justify-center text-xl">
-                            <i class="fa-brands fa-html5"></i>
-                        </div>
-                        <div class="font-bold text-gray-900 text-sm">HTML5 & CSS3</div>
-                        <div class="text-xs font-semibold text-purple-600">95% Mastery</div>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center space-y-3 hover:bg-purple-50 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 mx-auto flex items-center justify-center text-xl">
-                            <i class="fa-brands fa-js"></i>
-                        </div>
-                        <div class="font-bold text-gray-900 text-sm">JavaScript & AJAX</div>
-                        <div class="text-xs font-semibold text-purple-600">88% Mastery</div>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center space-y-3 hover:bg-purple-50 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 mx-auto flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-code-merge"></i>
-                        </div>
-                        <div class="font-bold text-gray-900 text-sm">Tailwind CSS</div>
-                        <div class="text-xs font-semibold text-purple-600">94% Mastery</div>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center space-y-3 hover:bg-purple-50 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 mx-auto flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-database"></i>
-                        </div>
-                        <div class="font-bold text-gray-900 text-sm">MySQL Database</div>
-                        <div class="text-xs font-semibold text-purple-600">85% Mastery</div>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center space-y-3 hover:bg-purple-50 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 mx-auto flex items-center justify-center text-xl">
-                            <i class="fa-brands fa-github"></i>
-                        </div>
-                        <div class="font-bold text-gray-900 text-sm">Git & GitHub</div>
-                        <div class="text-xs font-semibold text-purple-600">90% Mastery</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Training Certifications Section (Loaded via AJAX) -->
-        <section class="py-20 bg-slate-50 border-b border-gray-100">
-            <div class="max-w-[1320px] mx-auto px-4">
-                <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                    <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Verified Qualifications</span>
-                    <h2 class="text-3xl font-bold text-gray-900">Training & Certifications</h2>
-                </div>
-                <div id="portfolio-certifications-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center justify-between">
-                        <div class="space-y-1">
-                            <span class="text-xs font-bold text-purple-600">2025</span>
-                            <h4 class="font-bold text-gray-900 text-base">NSDA Level-4 Certified Web Developer</h4>
-                            <p class="text-xs text-gray-500">National Skills Development Authority (NSDA)</p>
-                        </div>
-                        <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center">
-                            <i class="fa-solid fa-award"></i>
-                        </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center justify-between">
-                        <div class="space-y-1">
-                            <span class="text-xs font-bold text-purple-600">2024</span>
-                            <h4 class="font-bold text-gray-900 text-base">Laravel Certified Developer</h4>
-                            <p class="text-xs text-gray-500">Laravel Certification Authority</p>
-                        </div>
-                        <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center">
-                            <i class="fa-solid fa-award"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <!-- Working Experience Section -->
-        <section class="py-20 bg-slate-50 border-b border-gray-100">
-            <div class="max-w-[1320px] mx-auto px-4">
-                <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                    <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Professional History</span>
-                    <h2 class="text-3xl font-bold text-gray-900">Working Experience</h2>
-                </div>
-                <div class="max-w-4xl mx-auto space-y-6">
-                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm space-y-3">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                            <span class="text-xs font-bold px-3 py-1 bg-purple-100 text-purple-700 rounded-full w-fit">2024 - Present</span>
-                            <span class="text-xs font-semibold text-gray-500">Dhaka, Bangladesh</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900">Senior Full-Stack Web Developer</h3>
-                        <div class="text-sm font-semibold text-purple-600">TechVision Ltd</div>
-                        <ul class="space-y-2 text-xs text-gray-600 list-disc list-inside pt-2">
-                            <li>Architecting enterprise web applications using Laravel 11, Tailwind CSS, and MySQL.</li>
-                            <li>Leading a dedicated team of 4 frontend and backend software engineers.</li>
-                            <li>Writing RESTful APIs and securing authentication endpoints.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Projects Showcase (Loaded via AJAX) -->
-        <section class="py-24 bg-white">
-            <div class="max-w-[1320px] mx-auto px-4">
-                <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                    <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Projects Showcase</span>
-                    <h2 class="text-3xl font-bold text-gray-900">All Portfolio Projects</h2>
-                </div>
-                <div id="portfolio-showcase-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Dynamic AJAX Content -->
-                </div>
-            </div>
-        </section>
     </main>
-
-    <!-- Certification Modal Dialog -->
-    <div id="cert-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-        <div class="bg-white rounded-3xl max-w-lg w-full p-8 space-y-6 shadow-2xl relative">
-            <button onclick="closeCertModal()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-900 text-xl">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="space-y-2">
-                <span id="modal-cert-year" class="text-xs font-bold px-3 py-1 bg-purple-100 text-purple-700 rounded-full">Year</span>
-                <h3 id="modal-cert-title" class="text-2xl font-bold text-gray-900">Certification Title</h3>
-                <div id="modal-cert-issuer" class="text-sm font-semibold text-purple-600">Issuer</div>
-            </div>
-            <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100 space-y-2 text-xs">
-                <div class="text-gray-400 uppercase font-semibold">Credential ID</div>
-                <div id="modal-cert-id" class="font-mono font-bold text-gray-800">ID-123456</div>
-            </div>
-            <p id="modal-cert-details" class="text-gray-600 text-sm leading-relaxed">
-                Certification details...
-            </p>
-            <div class="pt-2">
-                <button onclick="closeCertModal()" class="w-full btn-primary-custom justify-center py-3 text-sm">
-                    Close Window
-                </button>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="bg-[#2A374A] text-white py-16 mt-auto">
